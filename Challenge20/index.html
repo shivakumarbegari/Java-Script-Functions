@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenges</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 20</h1>
+<p id="p" align="center"></p>
+<p id="p2" align="center"></p>
+<script>
+    function strId(len){
+    var list="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    var temp="";
+    for(var i=0;i<len;i++){
+        temp+=list.charAt(Math.floor(Math.random()*list.length));
+    }
+    console.log(temp);
+    return temp;
+    
+}
+var x=Number(prompt("random string length"));
+document.getElementById("p").innerHTML=""+strId(x);
+</script>
+
+</body>
+</html>

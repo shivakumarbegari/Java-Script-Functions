@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenge 2</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 2</h1>
+<p id="p" align="center"></p>
+<p id="p2" align="center"></p>
+<script>
+var ip=prompt("enter a string to check for palindrome or not");
+ip=ip+"";
+iparr=ip.split("");
+var x=iparr.reverse().join("");
+
+if(ip===x)	{document.getElementById("p").innerHTML="\""+ip+"\""+" is a palindrome";}//alert("palindrome");
+else	{document.getElementById("p").innerHTML="\""+ip+"\""+" is not a palindrome";}//alert("not a palindrome");
+//document.getElementById("p").innerHTML="Reversed number : "+x;
+</script>
+<script type="text/javascritpt" src="https://rawgit.com/shivakumarbegari/Java-Script-Basics/Challenge1/master/main.js">
+</body>
+</html>

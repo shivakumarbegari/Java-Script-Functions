@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenges</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 25</h1>
+<p id="p" align="center">var arr=["Australia", "Germany", "United States of America"];</p>
+<p id="p2" align="center"></p>
+<script>
+function longestcountryname(arr){
+    // var max=arr[0].length,maxi=0;
+    // for(var i=1;i<arr.length;i++){
+    //     if(arr[i].length>max)   {maxi=i;max=arr[i].length;}
+    // }
+    // return arr[maxi];
+    var res=arr.reduce(function(lastname,country){
+        return lastname.length>country.length?lastname:country;
+    });
+    return res;
+}
+var arr=["Australia", "Germany", "United States of America"];
+document.getElementById("p2").innerHTML=""+longestcountryname(arr);
+</script>
+
+</body>
+</html>

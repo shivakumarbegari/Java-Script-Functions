@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenge 14</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 14</h1>
+<p id="p" align="center"></p>
+<p id="p2" align="center"></p>
+<script>
+    carr=[1,2,4,3];
+    var a=prompt("convert to coins: ");
+    a=Number(a);x=Number(a);
+    carr=carr.sort(function(x,y){return x-y;}).reverse();
+    console.log(carr);
+    var i=0,ans=[];
+    while(a>0){
+        while(carr[i]>a)    i++;
+        if(a-carr[i]>=0)    {ans.push(carr[i]);a-=carr[i];}
+        else break;
+    }
+    console.log(ans);
+    document.getElementById("p").innerHTML="Coins for "+x+" are "+ans;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenges</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 28</h1>
+<p id="p" align="center">check console</p>
+<p id="p2" align="center"></p>
+<script>
+function fcalling(str,func){
+    func(str);
+    console.log("inside calling function with function as parameter");
+}
+function fcalled(str){
+    console.log(str);
+    console.log("inside called fn or parameter function");
+}
+fcalling("string",fcalled);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenge 5</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 5</h1>
+<p id="p" align="center"></p>
+<p id="p2" align="center"></p>
+<form>
+Enter string <input type="text" id="str"/>
+<input type="button" value="change first letters to Caps" onClick="fn()"/>
+</form>
+<script>
+function fn(){
+    var x=document.getElementById("str").value;
+    //var arr=x.split("");
+    var arr = x.split(' ');  
+    var newarr = [];  
+    for(var x = 0; x < arr.length; x++){  
+       newarr.push(arr[x].charAt(0).toUpperCase()+arr[x].slice(1));  
+    }  
+    console.log(newarr.join(' '));
+    document.getElementById("p").innerHTML=""+newarr.join(' ');
+}
+</script>
+
+</body>
+</html>

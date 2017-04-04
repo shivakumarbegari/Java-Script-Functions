@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenge 18</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 18</h1>
+<p id="p" align="center"></p>
+<p id="p2" align="center"></p>
+<script>
+    function binarySearch(arr, val) {
+   
+    
+   var mid = Math.floor(arr.length / 2);
+
+   if (arr[mid]===val)     return mid;
+   else if (arr.length === 1)   return null;
+   else if (arr[mid] < val) {
+      var arr1 = arr.slice(mid + 1);
+      var res = binarySearch(arr1, val);
+      if (res === null)     return null;
+      else    {return mid + 1 + res;}
+   }
+   else {
+      var arr2 = arr.slice(0, mid);
+      return binarySearch(arr2, val);
+   }
+}
+var arr=[1,2,3,4,5,6,7,8,9],val=8;
+var x=binarySearch(arr,8);
+console.log(binarySearch(arr,8));
+    document.getElementById("p").innerHTML="check console";
+</script>
+
+</body>
+</html>

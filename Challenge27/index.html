@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenges</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 26</h1>
+<p id="p" align="center"></p>
+<p id="p2" align="center"></p>
+<script>
+    var str=String(prompt("Enter a string to find longest palindromic substring"));
+    function longestpss(str){
+        var maxlength=0,ans='';
+        for(var i=0;i<str.length;i++){
+            var substr=str.substr(i,str.length);
+            for(var j=substr.length;j>=0;j--){
+                var subsubstr=substr.substr(0,j);
+                if(j===1)   continue;
+                if(isPalindrome(subsubstr)){
+                    if(subsubstr.length>maxlength){
+                        maxlength=subsubstr.length;
+                        ans=subsubstr;
+                    }
+                }
+            }
+        }
+        return ans;
+    }
+    function isPalindrome(str){
+        var reverse=str.split("").reverse().join("");
+        return str===reverse;
+    }
+    document.getElementById("p").innerHTML="Entered string is: "+str;
+    document.getElementById("p2").innerHTML="longest palindromic substring is : "+longestpss(str);
+</script>
+
+</body>
+</html>

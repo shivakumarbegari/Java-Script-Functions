@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenges</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 22</h1>
+<p id="p" align="center"></p>
+<p id="p2" align="center"></p>
+<script>
+    var str=String(prompt("enter string"));
+    var letter=prompt("enter character to count its no of occurences in string");
+    function occurenceletter(str,letter){
+    var count=0;
+    for(var i=0;i<str.length;i++){
+        if(str[i]===letter) count++;
+    }
+    return count;}
+document.getElementById("p").textContent=str;
+document.getElementById("p2").textContent="count of "+letter+" : is "+occurenceletter(str,letter);
+    // console.log(occurenceletter("asdfasdjhadsghiuargasghgalkjsdfsdg",'a'));
+</script>
+
+</body>
+</html>

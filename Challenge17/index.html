@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenge 17</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 17</h1>
+<p id="p" align="center"></p>
+<p id="p2" align="center"></p>
+<script>
+    var str=prompt("enter string: ");
+    var char={};
+    str.replace(/\S/g,function(l){
+        char[l]=(isNaN(char[l])?1:char[l]+1);
+    });
+    // return char;
+    console.log(char);
+    document.getElementById("p").innerHTML="str is : "+str+" ,check console";
+</script>
+
+</body>
+</html>

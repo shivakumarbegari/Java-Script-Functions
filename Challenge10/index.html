@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenge 10</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 10</h1>
+<p id="p" align="center">check console for identity matrix</p>
+<p id="p2" align="center"></p>
+<script>
+    var s=prompt("size:");
+    // size=2;
+    size=Number(s);
+    var arr=new Array(size);
+    for(var i=0;i<size;i++){
+        arr[i]=new Array(size).fill(0);
+        arr[i][i]=1;
+    }
+    console.log(arr);
+</script>
+
+</body>
+</html>

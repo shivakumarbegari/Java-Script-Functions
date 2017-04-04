@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenges</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 23</h1>
+<p id="p" align="center"></p>
+<p id="p2" align="center"></p>
+<script>
+    var str=String(prompt("enter string"));
+    function firstnonrepeatedletter(str){
+    
+    for(var i=0;i<str.length;i++){
+        var c=1;
+        for(var j=i+1;j<str.length;j++){
+            if(str[j]===str[i]) c++;
+        }
+        if(c<2) {return str[i];break;}
+    }
+    }
+    console.log(firstnonrepeatedletter(str));
+    document.getElementById("p").textContent=str;
+    document.getElementById("p2").textContent="first non repeated char is "+firstnonrepeatedletter(str) ;
+</script>
+
+</body>
+</html>

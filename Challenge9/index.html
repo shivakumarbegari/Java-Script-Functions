@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenge 9</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 9</h1>
+<p id="p" align="center"></p>
+<p id="p2" align="center"></p>
+<script>
+function type(arg)  
+{  
+var types = [Function, RegExp, Number, String, Boolean, Object], x, len;  
+      
+if (typeof arg === "object" || typeof arg === "function"){  
+     for (x = 0, len = types.length; x < len; x++) {  
+            if (arg instanceof dtypes[x])     return types[x]; 
+     }
+    }  
+    
+    return typeof arg;  
+}
+var x=2;
+var str="dadf";
+// var str=prompt("Enter something to find its type: ");//removed coz taking every type as stiring
+document.getElementById("p").innerHTML="Type of "+x+" is : "+type(x)+" , "+" Type of "+str+" is : "+type(str);
+document.getElementById("p2").innerHTML="run type(input) in console";
+</script>
+
+</body>
+</html>

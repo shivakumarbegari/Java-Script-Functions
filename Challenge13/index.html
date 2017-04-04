@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenge 13</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 13</h1>
+<p id="p" align="center"></p>
+<p id="p2" align="center"></p>
+<script>
+    var ip=prompt("Factors of this number: ");
+    ip=Number(ip);
+    var s=[];
+    for(var x=1;x<=Math.floor(Math.sqrt(ip));x++){
+        if(ip%x==0){
+            s.push(x);
+            if(ip/x!==x)    s.push(ip/x);
+        }
+    }
+    s=s.sort(function(x,y){return x-y;});
+    console.log(s);
+    document.getElementById("p").innerHTML="Factors of :" +ip+" are "+s;
+</script>
+
+</body>
+</html>

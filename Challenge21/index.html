@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenges</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 21</h1>
+<p id="p" align="center"></p>
+<p id="p2" align="center"></p>
+<script>
+function subset(arr, length)  
+ {  
+    var ans = [],result;  
+    for(var x = 0; x < Math.pow(2, arr.length); x++) {  
+        result = [];  
+        i = arr.length - 1;   
+        do {  
+        if( (x & (1 << i)) !== 0){  
+                result.push(arr[i]);}  
+            }  while(i--);  
+    
+        if( result.length === length) {  
+            ans.push(result);  }  
+        }  
+  
+    return ans;   
+}  
+  
+console.log(subset([1, 2, 3], 2));
+    // function subsets(arr){
+    //     var result=[];
+    //     var leng=arr.length;
+    //     for(var x=0;x<arr.length-1;x++){
+    //         var narr=[arr[x]];
+    //         for(var y=x+1;y<arr.length;y++){
+    //             narr.push(arr[y]);
+    //             // var rev=narr.split('').reverse().join('');
+    //             result.push(narr);
+    //             // result.push(rev);
+    //             narr=[arr[x]];
+    //         }
+    //     }
+        
+    //     return result;
+    // }
+    // var result=subsets([1,2,3]);
+    // for(var j=0;j<result.length;j++){
+    //     console.log(result[j]);
+    //     var x=result[j].reverse();
+    //     console.log(x);
+    //     // result.push(x);
+    //     // console.log(result[j]);
+    // }
+    // // for(var j=0;j<result.length;j++){
+    //     // console.log(result[j]);
+        
+    // // }
+    // // document.getElementById("p").innerHTML=""+subsets([1,2,3]);
+</script>
+
+</body>
+</html>

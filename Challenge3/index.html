@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenge 3</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 3</h1>
+<p id="p" align="center"></p>
+<p id="p2" align="center"></p>
+<form>
+Enter string to generate all posibilities<input type="text" id="str"/>
+<input type="button" value="generate" onClick="fn()"/>
+</form>
+<script>
+function fn(){
+	var str=document.getElementById("str").value;
+	console.log(""+str);
+	var strarr=str.split("");
+	var ans=[];
+	for(var i=0;i<strarr.length;i++){
+		var tmp=""+strarr[i];
+		ans.push(tmp);
+		document.write(tmp+",");
+		console.log(tmp);
+		for(var j=i+1;j<strarr.length;j++){
+			tmp=tmp+str[j];
+			ans.push(tmp);
+			
+			console.log(tmp);
+			document.write(tmp+",");
+		}
+	}
+
+}
+</script>
+<script type="text/javascritpt" src="https://rawgit.com/shivakumarbegari/Java-Script-Basics/Challenge1/master/main.js">
+</body>
+</html>

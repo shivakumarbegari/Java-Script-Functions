@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenge 16</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 16</h1>
+<p id="p" align="center"></p>
+<p id="p2" align="center"></p>
+<script>
+    var str=prompt("enter string to extract unique characters");
+    var ustr="";
+    for(var i=0;i<str.length;i++){
+        if(ustr.indexOf(str[i])===-1)   ustr+=str[i];
+    }
+    console.log(ustr);
+    document.getElementById("p").innerHTML="Unique chars of \""+str+ "\" are \""+ustr+"\"";
+</script>
+
+</body>
+</html>
