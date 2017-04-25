@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Challenge 30</title>
+
+</head>
+<body bgcolor="">
+<h1 align="center">Challenge 30</h1>
+<p id="p" align="center"></p>
+<p id="p2" align="center"></p>
+<form>
+Enter string to generate all posibilities<input type="text" id="str"/>
+<input type="button" value="generate" onClick="fn()"/>
+</form>
+<script>
+
+function fnpermutations(str) {
+    if (str.length < 2) return str;
+    var ans = []; 
+    for (var i=0; i<str.length; i++) {
+        var char = str[i];        
+        if (str.indexOf(char) != i)  continue;           
+        var newstr = str.slice(0,i) + str.slice(i+1,str.length); 
+        for (var pofPermutation of fnpermutations(newstr))
+            ans.push(char + pofPermutation)
+    }
+    return ans;
+}
+
+function fn(){
+    var x = document.getElementById("str").value;
+    permutations = fnpermutations(x);
+    for (i of permutations){
+        document.write(i);
+        // console.log(permutation);
+        document.write("<br>");   
+    }
+
+}
+</script>
+</body>
+</html>

@@ -8,7 +8,7 @@
 <h1 align="center">Challenge 6</h1>
 <p id="p" align="center"></p>
 <p id="p2" align="center"></p>
-<form>
+<form align="center">
 String<input type="text" id="str"/>
 <input type="button" value="Longest string" onClick="fn()"/>
 </form>
@@ -16,11 +16,14 @@ String<input type="text" id="str"/>
 function fn(){
     var x=document.getElementById("str").value;
     var arr=x.split(' ');
+    for(var i=0;i<arr.length;i++){
+        if(arr[i].indexOf('-')!==-1)   {narr=arr[i].split('-');arr=arr.concat(narr);arr.splice(i,1);console.log(arr);console.log(narr);}
+    }
     var max=arr[0].length,maxi=0;
     for(var i=0;i<arr.length;i++){
         if(arr[i].length>max)   {maxi=i;max=arr[i].length;}
     }
-    console.log(arr[maxi]);
+    // console.log(arr[maxi]);
     document.getElementById("p").innerHTML="Longest String is : "+arr[maxi];
 }
 </script>
